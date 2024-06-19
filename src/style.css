@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-width: 0.25px;
+    border-style: solid;
+    border-image-slice: 1;
+}
+
+/* Dégradé pour la bordure supérieure de la grille */
+.border-tr-gradient {
+    border-top-width: 0.5px;
+    border-image-source: linear-gradient(to right, rgb(10 10 10), #FF0202); /* Inversion du gradient ici */
+}
+.border-tl-gradient {
+    border-top-width: 0.5px;
+    border-image-source: linear-gradient(to left, rgb(10 10 10), #FF0202); /* Inversion du gradient ici */
+}
+
+.border-cl-gradient {
+    border-width: 0.5px;
+    border-style: solid;
+    border-image-source: linear-gradient(45deg, rgb(10 10 10), #FF0202);
+}
+.border-cr-gradient {
+    border-width: 0.5px;
+    border-style: solid;
+    border-image-source: linear-gradient(135deg, rgb(10 10 10), #FF0202);
+}
+
+.border-cbl-gradient {
+    border-width: 0.5px;
+    border-style: solid;
+    border-image-source: linear-gradient(225deg, rgb(10 10 10), #FF0202);
+}
+
+.border-cbr-gradient {
+    border-width: 0.5px;
+    border-style: solid;
+    border-image-source: linear-gradient(315deg, rgb(10 10 10), #FF0202);
+}
+
+/* Dégradé pour la bordure inférieure de la grille */
+.border-b-gradient {
+    border-bottom-width: 0.5px;
+    border-image-source: linear-gradient(to top, rgb(10 10 10), #FF0202); /* Inversion du gradient ici */
+}
+
+.border-t-gradient {
+    border-top-width: 0.5px;
+    border-image-source: linear-gradient(to bottom, rgb(10 10 10), #FF0202); /* Inversion du gradient ici */
+}
+
+/* Dégradé pour la bordure gauche de la grille */
+.border-l-gradient {
+    border-left-width: 0.5px;
+    border-image-source: linear-gradient(to right, rgb(10 10 10), #FF0202); /* Inversion du gradient ici */
+}
+
+/* Dégradé pour la bordure droite de la grille */
+.border-r-gradient {
+    border-right-width: 0.5px;
+    border-image-source: linear-gradient(to left, rgb(10 10 10), #FF0202); /* Inversion du gradient ici */
+}
+
+
+/* Classe pour supprimer la bordure top */
+.border-none-top {
+    border-top: none;
+}
+
+/* Classe pour supprimer la bordure bottom */
+.border-none-bottom {
+    border-bottom: none;
+}
+
+/* Classe pour supprimer la bordure left */
+.border-none-left {
+    border-left: none;
+}
+
+/* Classe pour supprimer la bordure right */
+.border-none-right {
+    border-right: none;
+}
+
+.red-border {
+    border: 0.25px solid #FF0202;
+}
+
+.red-t-border {
+    border-top:0.5px solid #FF0202;
+}
+
+.red-b-border {
+    border-bottom:0.5px solid #FF0202;
+}
+
+.grid-item a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-name {
+    color: white;
+    font-size: 1rem;
+}
+
+.grid-item:hover .item-name {
+    opacity: 1;
+}
