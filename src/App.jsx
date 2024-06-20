@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div className='w-full h-auto flex flex-col justify-start items-center gap-40 md:gap-30 lg:gap-20 mt-[144px] md:mt-[68px] lg:mt-[100px]'>
       <section id='Home' className='relative w-10/12 h-[450px] lg:h-[650px] xl:h-[900px] flex justify-center items-center'>
-        <img src={Ordi} alt="ordinateur" className='background absolute w-full h-[400px] lg:w-full lg:h-[600px] xl:h-[850px] top-0' />
+        <img src={Ordi} alt="ordinateur" className='background absolute w-full h-[250px] sm:h-[300px] md:h-[400px] lg:w-full lg:h-[600px] xl:h-[850px] top-0' />
         <h1 className="text-white text-2xl md:text-3xl lg:text-4xl absolute lg:left-50 top-0 lg:top-0">Développeur Front-End</h1>
         <p className="text-white text-lg absolute top-[400px] left-50 lg:left-50 lg:top-12">
           Ex-militaire, développeur web rigoureux et créatif, je suis prêt à relever vos défis.<br/> 
