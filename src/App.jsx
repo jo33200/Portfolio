@@ -22,7 +22,7 @@ const App = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className='w-full h-auto flex flex-col justify-start items-center gap-20 lg:gap-20 mt-[144px] md:mt-[68px] lg:mt-[100px]'>
+    <div className='w-full h-auto flex flex-col justify-start items-center gap-40 md:gap-30 lg:gap-20 mt-[144px] md:mt-[68px] lg:mt-[100px]'>
       <section id='Home' className='relative w-10/12 h-[450px] lg:h-[650px] xl:h-[900px] flex justify-center items-center'>
         <img src={Ordi} alt="ordinateur" className='background absolute w-full h-[400px] lg:w-full lg:h-[600px] xl:h-[850px] top-0' />
         <h1 className="text-white text-2xl md:text-3xl lg:text-4xl absolute lg:left-50 top-0 lg:top-0">Développeur Front-End</h1>
@@ -33,7 +33,7 @@ const App = () => {
           </p>
       </section>
 
-      <section id='Portfolio' className='w-10/12 h-auto md:h-96 xl:h-[891px] flex justify-center items-center'>
+      <section id='Portfolio' className='w-10/12 h-auto md:h-96 xl:h-[891px] flex justify-center items-center mt-32 md:mt-20 lg:mt-0'>
         <div className="w-full h-full flex flex-col md:flex-row gap-10 space-x-4 justify-center items-center bg-neutral-950 p-10">
           {cardsData.map((card, index) => (
             <Card
