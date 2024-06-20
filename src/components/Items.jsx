@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo1 from '../assets/logoItems/logoHtml.svg';
 import Logo2 from '../assets/logoItems/logoJavascript.svg';
 import Logo3 from '../assets/logoItems/logoReact.svg';
