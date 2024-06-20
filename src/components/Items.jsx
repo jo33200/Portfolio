@@ -7,7 +7,7 @@ import Logo5 from '../assets/logoItems/logoCss.svg';
 import Logo6 from '../assets/logoItems/logoSass.svg';
 import Logo7 from '../assets/logoItems/logoTailwind.svg';
 import Logo8 from '../assets/logoItems/logoTypescript.svg';
-import Logo9 from '../assets/logoItems/logoNextBlanc.svg';
+import Logo9 from '../assets/logoItems/logoRedux.svg';
 import Logo10 from '../assets/logoItems/logoNode.svg';
 import Logo11 from '../assets/logoItems/logoMongodb.svg';
 import Logo12 from '../assets/logoItems/logoGit.svg';
@@ -25,7 +25,7 @@ const items = [
     { logo: Logo6, alt: 'Logo 6', name: 'Tailwind CSS', link: 'https://tailwindcss.com/' },
     { logo: Logo7, alt: 'Logo 7', name: 'Sass', link: 'https://sass-lang.com/' },
     { logo: Logo8, alt: 'Logo 8', name: 'Typescript', link: 'https://www.typescriptlang.org/' },
-    { logo: Logo9, alt: 'Logo 9', name: 'Next.js', link: 'https://nextjs.org/' },
+    { logo: Logo9, alt: 'Logo 9', name: 'Redux', link: 'https://redux.js.org/' },
     { logo: Logo10, alt: 'Logo 16', name: 'Node.js', link: 'https://nodejs.org/' },
     { logo: Logo11, alt: 'Logo 8', name: 'MongoDB', link: 'https://www.mongodb.com/' },
     { logo: Logo12, alt: 'Logo 6', name: 'Git', link: 'https://git-scm.com/' },

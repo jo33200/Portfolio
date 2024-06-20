@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import PropTypes from 'prop-types'; // Importer PropTypes
 import emailjs from 'emailjs-com';
 
 const ContactModal = ({ isOpen, onClose }) => {
@@ -39,44 +40,44 @@ const ContactModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50" onClick={handleBackdropClick}>
-      <div className="bg-neutral-100 p-8 rounded-lg shadow-lg max-w-md w-full">
+      <div className="bg-neutral-950 p-8 rounded-lg shadow-lg max-w-md w-full">
         {isMessageSent ? (
           <div className="text-green-500 text-center font-bold">
             ✅ Message envoyé avec succès!
           </div>
         ) : (
           <>
-            <h2 className="text-2xl font-bold mb-4">Contactez-moi</h2>
+            <h2 className="text-gray-500 text-2xl font-bold mb-4">Contactez-moi</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
-                <label className="block text-gray-700">Nom</label>
+                <label className="block text-gray-500">Nom</label>
                 <input 
                   type="text" 
                   name="name" 
                   value={formData.name} 
                   onChange={handleChange} 
-                  className="w-full p-2 border border-gray-300 rounded mt-1"
+                  className="bg-neutral-950 text-gray-300 w-full p-2 border border-gray-500 rounded mt-1"
                   required 
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Email</label>
+                <label className="block text-gray-500">Email</label>
                 <input 
                   type="email" 
                   name="email" 
                   value={formData.email} 
                   onChange={handleChange} 
-                  className="w-full p-2 border border-gray-300 rounded mt-1"
+                  className="bg-neutral-950 text-gray-300 w-full p-2 border border-gray-500 rounded mt-1"
                   required 
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Message</label>
+                <label className="block text-gray-500">Message</label>
                 <textarea 
                   name="message" 
                   value={formData.message} 
                   onChange={handleChange} 
-                  className="w-full p-2 border border-gray-300 rounded mt-1"
+                  className="bg-neutral-950 text-gray-300 w-full p-2 border border-gray-500 rounded mt-1"
                   required 
                 />
               </div>
@@ -101,6 +102,11 @@ const ContactModal = ({ isOpen, onClose }) => {
       </div>
     </div>
   );
+};
+
+ContactModal.propTypes = {
+  isOpen: PropTypes.bool.isRequired, // Définir le type des props
+  onClose: PropTypes.func.isRequired
 };
 
 export default ContactModal;
