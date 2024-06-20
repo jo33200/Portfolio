@@ -14,7 +14,7 @@ function Navbar() {
         
         <ul className='text-gray-500 font-bold text-lg flex space-x-4 gap-5'>
           <li className='hover:text-white cursor-pointer'><a href='#Portfolio'>Portfolio</a></li>
-          <li className='hover:text-white cursor-pointer'><a href="#Skill">Skill</a></li>
+          <li className='hover:text-white cursor-pointer'><a href="#Skill">Skills</a></li>
           <li 
             className='hover:text-white cursor-pointer' 
             onClick={() => setContactModalOpen(true)}

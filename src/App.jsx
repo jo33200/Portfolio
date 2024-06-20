@@ -26,7 +26,11 @@ const App = () => {
       <section id='Home' className='relative w-10/12 h-[450px] lg:h-[650px] xl:h-[900px] flex justify-center items-center'>
         <img src={Ordi} alt="ordinateur" className='background absolute w-full h-[400px] lg:w-full lg:h-[600px] xl:h-[850px] top-0' />
         <h1 className="text-white text-2xl md:text-3xl lg:text-4xl absolute lg:left-50 top-0 lg:top-0">Développeur Front-End</h1>
-        <p className="text-white text-lg absolute top-[400px] left-50 lg:left-50 lg:top-12">Ex-militaire, développeur web rigoureux et créatif, je suis prêt à relever vos défis.</p>
+        <p className="text-white text-lg absolute top-[400px] left-50 lg:left-50 lg:top-12">
+          Ex-militaire, développeur web rigoureux et créatif, je suis prêt à relever vos défis.<br/> 
+          Je me suis spécialisé dans le développement front-end grâce à la formation intégrateur web chez Openclassrooms.<br/>
+          Je recherche un poste de développeur front-end junior pour continuer de me développer et pouvoir continuer de monter en compétences.
+          </p>
       </section>
 
       <section id='Portfolio' className='w-10/12 h-auto md:h-96 xl:h-[891px] flex justify-center items-center'>
