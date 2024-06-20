@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const SocialLinks = ({ className }) => {
@@ -22,6 +23,10 @@ const SocialLinks = ({ className }) => {
       </a>
     </div>
   );
+};
+
+SocialLinks.propTypes = {
+  className: PropTypes.string,
 };
 
 export default SocialLinks;

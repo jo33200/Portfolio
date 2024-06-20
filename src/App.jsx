@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Ordi from './assets/ordi.webp';
 import Card from './components/Card';
 import Items from './components/Items';

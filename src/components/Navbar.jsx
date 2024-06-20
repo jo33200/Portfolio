@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Name from '../assets/name.svg';
 import SocialLinks from './SocialLinks';
 import ContactModal from './ContactModal';
