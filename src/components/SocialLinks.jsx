@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const SocialLinks = ({ className }) => {
   return (
-    <div className={`flex space-x-4 gap-5 ${className}`}>
+    <div className={`flex space-x-4 sm:gap-5 ${className}`}>
       <a
         href="https://github.com/jo33200"
         target="_blank"
