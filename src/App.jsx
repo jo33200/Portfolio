@@ -12,11 +12,11 @@ import url5 from './assets/imgProject/sophieBluel.png';
 
 const App = () => {
   const cardsData = [
-    { text: 'Argent Bank<br /> langage: React.js, Redux toolkit<br/> Projet qui consiste à implémenter redux dans une application sécurisé.', backgroundImage: url1, link: 'https://github.com/jo33200/ArgentBank' },
-    { text: "724 Events:<br/> Débugger le site d'une agence d'évènementielle<br/> rédiger le cahier de recettes<br /> tester le code", backgroundImage: url2, link: 'https://github.com/jo33200/724events' },
-    { text: 'Kasa<br/>Langage: React.js<br/>Créez une application web de location immobilière', backgroundImage: url3, link: 'https://github.com/jo33200/Kasa' },
-    { text: "site d'une Photographe Nina Carducci<br/>SEO et Performance<br/> Optimisation du référencement et des performances", backgroundImage: url4, link: 'https://github.com/jo33200/nina-carducci' },
-    { text: "Portfolio Sophie Bluel<br/>Langage: JavaScript<br/> création d'une page web dynamique en communiquant avec une API", backgroundImage: url5, link: 'https://github.com/jo33200/Portfolio-sophie-bluel' },
+    { text: '<strong>Argent Bank</strong><br/>langage: React.js, Redux toolkit<br/> Projet qui consiste à implémenter redux dans une application sécurisé.', backgroundImage: url1, link: 'https://github.com/jo33200/ArgentBank' },
+    { text: "<strong>724 Events:</strong><br/>Tests unitaires, d'intégration, fonctionnels<br/>Débugger le site d'une agence d'évènementielle<br/> rédiger le cahier de recettes<br /> tester le code", backgroundImage: url2, link: 'https://github.com/jo33200/724events' },
+    { text: '<strong>Kasa</strong><br/>Langage: React.js<br/>Créez une application web de location immobilière', backgroundImage: url3, link: 'https://github.com/jo33200/Kasa' },
+    { text: "<strong>site d'une Photographe Nina Carducci</strong><br/>SEO et Performance<br/> Optimisation du référencement et des performances", backgroundImage: url4, link: 'https://github.com/jo33200/nina-carducci' },
+    { text: "<strong>Portfolio Sophie Bluel</strong><br/>Langage: JavaScript<br/> création d'une page web dynamique en communiquant avec une API", backgroundImage: url5, link: 'https://github.com/jo33200/Portfolio-sophie-bluel' },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -27,9 +27,9 @@ const App = () => {
         <img src={Ordi} alt="ordinateur" className='background absolute w-full h-[250px] sm:h-[300px] md:h-[400px] lg:w-full lg:h-[600px] xl:h-[850px] top-0' />
         <h1 className="text-white text-2xl md:text-3xl lg:text-4xl absolute lg:left-50 top-0 lg:top-0">Développeur Front-End</h1>
         <p className="text-white text-center text-lg absolute top-[400px] left-50 lg:left-50 lg:top-12">
-          Ex-militaire, développeur web rigoureux et créatif, je suis prêt à relever vos défis.<br/> 
+          Militaire en reconversion, développeur web rigoureux et créatif, je suis prêt à relever vos défis.<br/> 
           Je me suis spécialisé dans le développement front-end grâce à la formation intégrateur web chez Openclassrooms.<br/>
-          Je recherche un poste de développeur front-end junior pour continuer de me développer et de monter en compétences.
+          Je recherche un poste de développeur front-end junior pour continuer de progresser et de monter en compétences.
           </p>
       </section>
 

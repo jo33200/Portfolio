@@ -35,7 +35,32 @@ const Card = ({ text, backgroundImage, link, isActive, onMouseEnter }) => {
   }, []);
 
   const createMarkup = () => {
-    return { __html: text };
+    // Diviser le texte en parties en fonction des balises <br/>
+    const parts = text.split('<br/>');
+  
+    // Première partie (peut contenir des balises HTML)
+    let firstPart = parts[0];
+  
+    // Deuxième partie
+    let secondPart = parts[1];
+  
+    // Troisième partie
+    let thirdPart = parts[2];
+  
+    // Traitement spécial pour la carte "724 Events"
+    if (firstPart === '724 Events:') {
+      secondPart = ` ${secondPart}`; // Ajouter un espace avant la deuxième partie
+      thirdPart = ` ${thirdPart}`; // Ajouter un espace avant la troisième partie
+    }
+  
+    // Retourner le texte formaté avec les balises HTML
+    return {
+      __html: `
+        ${firstPart}<br/><br/> <!-- Ajouter de l'espace avant la deuxième partie -->
+        <em>${secondPart}</em><br/><br/> <!-- Mettre la deuxième partie en italique -->
+        ${thirdPart} <!-- Laisser la troisième partie en texte normal -->
+      `
+    };
   };
 
   return (
