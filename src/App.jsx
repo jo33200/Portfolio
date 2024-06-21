@@ -33,7 +33,7 @@ const App = () => {
       </p>
     </section>
 
-      <section id='Portfolio' className='w-10/12 lg:w-full h-auto md:h-auto lg:h-auto xl:h-[891px] flex justify-center items-center mt-32 md:mt-20 lg:mt-0'>
+      <section id='Portfolio' className='w-10/12 lg:w-full h-auto md:h-auto lg:h-auto xl:h-[891px] flex justify-center items-center'>
         <div className="w-full h-full xl:h-auto flex flex-col lg:flex-row lg:space-x-4 justify-center items-center bg-neutral-950 p-10 gap-20 lg:gap-0">
           {cardsData.map((card, index) => (
             <Card
