@@ -117,3 +117,15 @@
 .grid-item:hover .item-name {
     opacity: 1;
 }
+
+.border-b-card {
+    border-bottom-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(10, 10, 10), red, rgb(10, 10, 10));
+    border-image-slice: 1;
+}
+
+.border-form {
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, rgb(10, 10, 10), red, rgb(10, 10, 10));
+    border-image-slice: 1;
+}

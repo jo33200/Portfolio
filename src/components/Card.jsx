@@ -1,8 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import { FaHandPointer } from 'react-icons/fa';
 
-const Card = ({ text, backgroundImage, link, isActive, onMouseEnter }) => {
-  const [isVisible, setIsVisible] = useState(false);
+const Card = ({ text, backgroundImage, link, onMouseEnter }) => {
+  const [isHovered, setIsHovered] = useState(false); // État pour gérer le survol initial
+  const [isVisible, setIsVisible] = useState(false); // État pour gérer la visibilité de la carte
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   const cardRef = useRef();
 
   useEffect(() => {
@@ -12,9 +23,9 @@ const Card = ({ text, backgroundImage, link, isActive, onMouseEnter }) => {
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            setIsVisible(true);
+            setIsVisible(true); // La carte est visible dans la vue
           } else {
-            setIsVisible(false);
+            setIsVisible(false); // La carte n'est pas visible dans la vue
           }
         });
       },
@@ -35,46 +46,47 @@ const Card = ({ text, backgroundImage, link, isActive, onMouseEnter }) => {
   }, []);
 
   const createMarkup = () => {
-    // Diviser le texte en parties en fonction des balises <br/>
     const parts = text.split('<br/>');
-  
-    // Première partie (peut contenir des balises HTML)
     let firstPart = parts[0];
-  
-    // Deuxième partie
     let secondPart = parts[1];
-  
-    // Troisième partie
     let thirdPart = parts[2];
-  
-    // Traitement spécial pour la carte "724 Events"
+
     if (firstPart === '724 Events:') {
-      secondPart = ` ${secondPart}`; // Ajouter un espace avant la deuxième partie
-      thirdPart = ` ${thirdPart}`; // Ajouter un espace avant la troisième partie
+      secondPart = ` ${secondPart}`;
+      thirdPart = ` ${thirdPart}`;
     }
-  
-    // Retourner le texte formaté avec les balises HTML
+
     return {
       __html: `
-        ${firstPart}<br/><br/> <!-- Ajouter de l'espace avant la deuxième partie -->
-        <em>${secondPart}</em><br/><br/> <!-- Mettre la deuxième partie en italique -->
-        ${thirdPart} <!-- Laisser la troisième partie en texte normal -->
+        ${firstPart}<br/><br/>
+        <em>${secondPart}</em><br/><br/>
+        ${thirdPart}
       `
     };
   };
 
   return (
-    <a
-      href={link}
-      ref={cardRef}
-      className={`relative w-full lg:w-1/4 h-[650px] md:h-full object-scale-down bg-cover bg-center md:transition-transform md:duration-300 ${isActive ? 'md:scale-x-125 md:scale-y-110 mdz-10 md:cursor-pointer' : ''} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500`}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-      onMouseEnter={onMouseEnter}
-    >
-      <div className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-center p-4 ${isVisible ? 'block' : 'hidden'} hover:bg-opacity-75`}>
+    <div className='h-auto lg:h-[800px] xl:h-auto w-full flex flex-col lg:flex-col items-center justify-between lg:gap-20 border-b-card lg:border-none'>
+      <a
+        href={link}
+        ref={cardRef}
+        className={`relative w-[300px] lg:w-full h-[800px] bg-cover bg-center md:transition-transform md:duration-300 ${isHovered && isVisible ? 'scale-110' : ''} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500`}
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {/* Conteneur pour l'icône et le texte */}
+        <div className={`absolute inset-0 flex items-center justify-center bg-black bg-opacity-0 transition-opacity duration-300 ${isHovered && isVisible ? 'opacity-100 hover:bg-opacity-50' : 'opacity-0'}`}>
+          <div className="text-white text-center flex flex-col items-center justify-center">
+            <FaHandPointer className="w-12 h-12 mx-auto" />
+            <p className="mt-2">Lien vers GitHub</p>
+          </div>
+        </div>
+      </a>
+      <div className=" md:w-4/5 lg:h-[600px] xl:h-[350px] text-center p-4 mt-4 lg:mt-0 bg-neutral-950 text-white">
         <h2 dangerouslySetInnerHTML={createMarkup()} />
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -82,7 +94,6 @@ Card.propTypes = {
   text: PropTypes.string.isRequired,
   backgroundImage: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  isActive: PropTypes.bool.isRequired,
   onMouseEnter: PropTypes.func.isRequired,
 };
 
