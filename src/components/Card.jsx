@@ -70,7 +70,7 @@ const Card = ({ text, backgroundImage, link, onMouseEnter }) => {
       <a
         href={link}
         ref={cardRef}
-        className={`relative w-[300px] lg:w-full h-[800px] bg-cover bg-center md:transition-transform md:duration-300 ${isHovered && isVisible ? 'scale-110' : ''} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500`}
+        className={`relative w-[380px] lg:w-full h-[800px] bg-cover bg-center md:transition-transform md:duration-300 ${isHovered && isVisible ? 'scale-110' : ''} focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500`}
         style={{ backgroundImage: `url(${backgroundImage})` }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
