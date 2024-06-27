@@ -12,7 +12,7 @@ function Navbar() {
 
         <a href='#Home'><img src={Name} alt="mon nom" className='w-60 h-10' /></a>
         
-        <ul className='text-gray-500 font-bold text-lg flex items-center justify-center space-x-4 sm:gap-5'>
+        <ul className='text-gray-400 font-bold text-lg flex items-center justify-center space-x-4 sm:gap-5'>
           <li className='hover:text-white cursor-pointer'><a href='#Portfolio'>Portfolio</a></li>
           <li className='hover:text-white cursor-pointer'><a href="#Skill">Skills</a></li>
           <li 

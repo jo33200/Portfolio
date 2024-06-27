@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { FaHandPointer } from 'react-icons/fa';
 
-const Card = ({ text, backgroundImage, link, onMouseEnter }) => {
+const Card = ({ text, backgroundImage, link, }) => {
   const [isHovered, setIsHovered] = useState(false); // État pour gérer le survol initial
   const [isVisible, setIsVisible] = useState(false); // État pour gérer la visibilité de la carte
 
